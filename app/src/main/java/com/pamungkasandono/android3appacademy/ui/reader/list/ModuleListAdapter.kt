@@ -32,7 +32,6 @@ class ModuleListAdapter internal constructor(private val listener: MyAdapterClic
         holder.bind(listModules[position])
         holder.itemView.setOnClickListener {
             listener.onItemClicked(holder.adapterPosition, listModules[holder.adapterPosition].moduleId)
-            Log.d("asdasd", "$position \n${holder.adapterPosition}")
         }
     }
 

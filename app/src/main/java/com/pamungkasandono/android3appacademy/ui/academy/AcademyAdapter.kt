@@ -34,7 +34,7 @@ class AcademyAdapter : RecyclerView.Adapter<AcademyAdapter.CourseViewHolder>() {
 
     override fun getItemCount(): Int = listCourses.size
 
-    inner class CourseViewHolder(private val binding: ItemsAcademyBinding) :
+    class CourseViewHolder(private val binding: ItemsAcademyBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(course: CourseEntity) {
             with(binding) {
