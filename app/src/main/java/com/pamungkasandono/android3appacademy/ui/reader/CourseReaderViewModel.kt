@@ -1,6 +1,5 @@
 package com.pamungkasandono.android3appacademy.ui.reader
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.pamungkasandono.android3appacademy.data.ContentEntity
 import com.pamungkasandono.android3appacademy.data.ModuleEntity
@@ -16,18 +15,14 @@ class CourseReaderViewModel : ViewModel() {
 
     fun setSelectedModule(moduleId: String) {
         this.moduleId = moduleId
-        Log.d("asdasd moduleid", moduleId)
     }
 
     fun getModules(): ArrayList<ModuleEntity> = DataDummy.generateDummyModules(this.courseId)
 
     fun getSelectedModule(): ModuleEntity {
-        Log.d("asdasd courseid", "courseid:${courseId}")
-        Log.d("asdasd mE.moduleId", "cedl1")
         lateinit var module: ModuleEntity
         val moduleEntities = getModules()
         for (moduleEntity in moduleEntities) {
-            Log.d("asdasd mE.moduleId", moduleEntity.moduleId)
             if (moduleEntity.moduleId == moduleId) {
                 module = moduleEntity
                 module.contentEntity =

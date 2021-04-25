@@ -7,4 +7,5 @@ import com.pamungkasandono.android3appacademy.utils.DataDummy
 class AcademyViewModel : ViewModel() {
 
     fun getCourse(): List<CourseEntity> = DataDummy.generateDummyCourse()
+
 }
