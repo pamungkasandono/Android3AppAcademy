@@ -52,9 +52,7 @@ class AcademyAdapter : RecyclerView.Adapter<AcademyAdapter.CourseViewHolder>() {
                             .error(R.drawable.ic_broken_image_black)
                     )
                     .into(imgPoster)
-
             }
         }
-
     }
 }

@@ -45,17 +45,10 @@ class DetailCourseActivity : AppCompatActivity() {
         if (extras != null) {
             val courseId = extras.getString(EXTRA_COURSE)
             if (courseId != null) {
-//                val modules = DataDummy.generateDummyModules(courseId)
                 viewModel.setSelectedCourse(courseId)
                 val modules = viewModel.getModules()
                 adapter.setModule(modules)
                 populateCourse(viewModel.getCourse() as CourseEntity)
-
-//                for (course in DataDummy.generateDummyCourse()) {
-//                    if (course.courseId == courseId) {
-//                        populateCourse(course)
-//                    }
-//                }
             }
         }
 

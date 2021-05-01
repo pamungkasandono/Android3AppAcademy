@@ -6,7 +6,7 @@ import com.pamungkasandono.android3appacademy.data.ModuleEntity
 object DataDummy {
 
     fun generateDummyCourse(): List<CourseEntity> {
-        var courses = ArrayList<CourseEntity>()
+        val courses = ArrayList<CourseEntity>()
 
         courses.add(
             CourseEntity(
